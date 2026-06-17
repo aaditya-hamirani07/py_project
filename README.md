@@ -1,36 +1,25 @@
-This repository contains two Python programs:
+Python Mini Projects
 
-1.Text Encryption & Decryption
-2.Tic Tac Toe Game
+This repository contains Python mini Projects:
 
+Text Encryption & Decryption
+- Encrypts and decrypts full sentences
+- Words with 3 or more characters: first letter moved to end, 3 random characters added front and back
+- Shorter words: reversed
+- Decryption restores original text
 
-A Python script that encrypts and decrypts text messages.  
+Tic Tac Toe
+- Two-player console game on a 3×3 grid
+- Input validation prevents overwriting moves
+- Detects wins across rows, columns, diagonals
+- Declares draw if board is full
 
-It handles full sentences, safely splitting and parsing words based on their lengths.
+Number Guessing
+- Random number generated
+- Player guesses until correct
+- Feedback with higher/lower hints
 
-How it works:
-
-Encryption - For words with 3 or more,it moves the first letter to the end and adds 3 random characters to both the front and the back of the word.
-
-For shorter words it simply reverse the string
-
-Decryption - Reverses the exact encrytion steps.
-
-
-A simple console-based Tic Tac Toe game implemented in Python.  
-
-Two players can play alternately, marking `X` and `O` on a 3×3 grid.
-
--Interactive command-line interface
-
--Input validation (prevents overwriting moves)
-
--Win detection for rows, columns, and diagonals
-
--Declares a draw if the board is filled with no winner
-
-1.Run the script.
-
-2.Players take turns entering their move (row and column).
-
-3.The game announces the winner or a draw at the end.
+Rock Paper Scissor
+- Player vs computer
+- Randomized computer choice
+- Declares winner or tie
