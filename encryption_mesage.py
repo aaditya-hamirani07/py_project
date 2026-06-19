@@ -57,7 +57,7 @@ while True:
         decrypted_list = decryption_block(d)
         print("The decrypted message is:"," ".join(decrypted_list))
     elif(num==0):
-        print("Program exit")
+        print("Program exit...")
         break
     else:
-        print("Invalid,please enter 1,2 or 0")
+        print("Invalid ,please enter 1,2 or 0")
