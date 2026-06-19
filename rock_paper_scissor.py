@@ -45,5 +45,3 @@ while True:
     b=int(input("Enter 1 for playing again , 0 for exit: "))
     if(b!=1):
         break
-
-

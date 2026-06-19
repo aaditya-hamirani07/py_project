@@ -1,7 +1,7 @@
 import random
 alpha = [chr(i) for i in range(97, 123)]
 
-# Function for encrypting message
+# Function for encrypting messages
 def encryption_block(x):
     l1 = x.split()
     l2 = []
