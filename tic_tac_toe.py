@@ -100,7 +100,7 @@ while True:
                 table_change_for_X(a)
                 break
             else:
-                print("Enter a valid move")
+                print("Enter a valid move  ")
     else:
         winner_finder()
         break
