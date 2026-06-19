@@ -21,5 +21,9 @@ Number Guessing
 
 Rock Paper Scissor
 - Player vs computer
-- Randomized computer choice
+- Randomized computer choice 
 - Declares winner or tie
+
+Snake and ladder
+- 2 Player
+- declares winner
