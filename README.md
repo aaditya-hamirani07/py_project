@@ -26,4 +26,5 @@ Rock Paper Scissor
 
 Snake and ladder
 - 2 Player
-- declares winner
+- Declares winner when a player reaches 100
+- Tracks and displays time taken to complete the game using decorators
