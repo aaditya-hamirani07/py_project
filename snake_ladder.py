@@ -1,4 +1,13 @@
 import random
+import time
+
+def measure_time(func):
+    def time_count():
+        start =  time.time()
+        func()
+        end = time.time()
+        print(f"U took {end - start : .2f}s time to complete game ")
+    return time_count
 
 dice = {
     1:["-------","|     |","|  *  |","|     |","-------"],
@@ -55,11 +64,11 @@ def condition_checker():
     if(p1_location==100):
             board_updation()
             print("congratulations player 1 win !!!".center(100))
-            exit()
+            return True
     elif(p2_location==100):
             board_updation()
             print("congratulations player 2 win !!!".center(100))
-            exit()
+            return True
     elif (p1_location>100):
         p1_location -= p1_dice
         print("Number should be less than ",(101-p1_location))
@@ -97,23 +106,29 @@ def dice_printing(x):
 print("Welcome to game of snake and ladder".center(100))
 print()
 print_board()
-while True:
-    flag = 0
-    a=input("P1 Enter Y for rolling die: ")
-    p1_dice=random.randint(1,6)
-    print(f"You got {p1_dice}")
-    p1_location += p1_dice
-    dice_printing(p1_dice)
-    condition_checker()
-    coordinates_P1()
-    board_updation()
 
-    flag = 0
-    b=input("P2 Enter Y for rolling die: ")
-    p2_dice=random.randint(1,6)
-    print(f"You got {p2_dice}")
-    p2_location += p2_dice
-    dice_printing(p2_dice)
-    condition_checker()
-    coordinates_P2()
-    board_updation()
+@measure_time
+def playing():
+    global p1_location , p2_location , p1_dice , p2_dice
+    while True:
+        flag = 0
+        a=input("P1 Enter Y for rolling die: ")
+        p1_dice=random.randint(1,6)
+        print(f"You got {p1_dice}")
+        p1_location += p1_dice
+        dice_printing(p1_dice)
+        if condition_checker() : break
+        coordinates_P1()
+        board_updation()
+
+        flag = 0
+        b=input("P2 Enter Y for rolling die: ")
+        p2_dice=random.randint(1,6)
+        print(f"You got {p2_dice}")
+        p2_location += p2_dice
+        dice_printing(p2_dice)
+        if condition_checker() : break 
+        coordinates_P2()
+        board_updation()
+    
+playing()
